@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 export default class ModalOpen extends Component {
     constructor(props) {
@@ -50,8 +51,8 @@ export default class ModalOpen extends Component {
 
 
 ModalOpen.propTypes = {
-    eventListener: React.PropTypes.object,
-    modalFooter: React.PropTypes.node,
-    modalHeader: React.PropTypes.string,
-    modalBody: React.PropTypes.node
+    eventListener: PropTypes.object,
+    modalFooter: PropTypes.node,
+    modalHeader: PropTypes.string,
+    modalBody: PropTypes.node
 };

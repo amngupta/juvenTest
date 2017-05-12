@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Col, Row } from 'react-bootstrap';
 import ProfileCover from './components/profileCover';
 import * as firebase from 'firebase';
 import config from '../config';
+import PropTypes from 'prop-types';
+
 var fconfig = {
     apiKey: config.apiKey,
     authDomain: config.authDomain,
@@ -15,25 +16,48 @@ var fconfig = {
 
 export default class OrganizationInfo extends Component {
 
-    componentWillMount() {
-        console.log(config);
-        firebase.initializeApp(fconfig);
 
+    componentWillMount() {
+        firebase.initializeApp(fconfig);
         let database = firebase.database();
         let orgId = this.props.id;
-        database.ref('/organizations/' + orgId).once('value').then((snapshot) => {
-            // this.setState(snapshot);
-            console.log(snapshot.val());
-        });
+        let self = this;
+        database.ref('/organizations/' + orgId)
+            .once('value')
+            .then((snapshot) => {
+                // this.setState(snapshot);
+                let orgVals = snapshot.val();
+                console.log(orgVals);
+                if (orgVals) {
+                    self.setState({
+                        organization: orgVals
+                    });
+                }
+            });
+
+        database.ref('events').orderByChild("organization").equalTo(orgId)
+            .on("child_added", function (snapshot) {
+                console.log(snapshot.val());
+                let eventObjs = snapshot.val();
+                if (eventObjs) {
+                    self.setState({
+                        events: eventObjs
+                    });
+                }
+            });
     }
 
     render() {
         return (
-            <ProfileCover />
+            <div>
+                {this.state &&
+                    <ProfileCover organization={this.state.organization} />
+                }
+            </div>
         );
     }
 }
 
 OrganizationInfo.propTypes = {
-    id: React.PropTypes.node,
+    id: PropTypes.string.isRequired
 }
