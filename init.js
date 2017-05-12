@@ -2,13 +2,14 @@ import * as firebase from 'firebase';
 import _ from 'lodash';
 import data from './database';
 
+import config from './config';
 var config = {
-    apiKey: "AIzaSyBmIWoOElN3nIJMyUGf5lQ890h3vllS-4M",
-    authDomain: "juven-frontend.firebaseapp.com",
-    databaseURL: "https://juven-frontend.firebaseio.com",
-    projectId: "juven-frontend",
-    storageBucket: "juven-frontend.appspot.com",
-    messagingSenderId: "297658297174"
+    apiKey: config.apiKey,
+    authDomain: config.authDomain,
+    databaseURL: config.databaseURL,
+    projectId: config.projectId,
+    storageBucket: config.projectId,
+    messagingSenderId: config.messagingSenderId
 };
 
 firebase.initializeApp(config);
