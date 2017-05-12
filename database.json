@@ -1,0 +1,36 @@
+{
+    "users": {
+        "aman": {
+            "name": "Aman Gupta",
+            "email": "aman96@gmail.com",
+            "image_url": ""
+        },
+        "testbot": {
+            "name": "Test Bot",
+            "email": "t@bot.com",
+            "image_url": ""
+        }
+    },
+    "organizations": {
+        "juven": {
+            "name": "Juven Co.",
+            "description": "Event Management Company",
+            "created_at": "11/05/2017",
+            "location":"Hong Kong",
+            "profile_image_url": "",
+            "cover_image_url":""
+        }
+    },
+    "events": {
+        "summerParty": {
+            "name": "Summer Party for Employees",
+            "date": "01/06/2017",
+            "location": "Stanley Ho Beach",
+            "image_url": "",
+            "organization": "juven",
+            "users": {
+                "testbot": true
+            }
+        }
+    }
+}
