@@ -3,7 +3,7 @@ import _ from 'lodash';
 import data from './database';
 
 import config from './config';
-var config = {
+var fconfig = {
     apiKey: config.apiKey,
     authDomain: config.authDomain,
     databaseURL: config.databaseURL,
@@ -12,7 +12,7 @@ var config = {
     messagingSenderId: config.messagingSenderId
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(fconfig);
 firebase.auth().signInAnonymously().catch(function (error) {
     console.log(error)
 });
@@ -25,7 +25,7 @@ let writeUserData = () => {
         database.ref('users/' + id)
             .set(user)
             .then(() => {
-                console.log("Success!");
+                console.log("Success!", id);
             })
             .catch(err => {
                 console.log(err);
@@ -38,7 +38,7 @@ let writeOrganizationData = () => {
         database.ref('organizations/' + id)
             .set(organization)
             .then(() => {
-                console.log("Success!");
+                console.log("Success!", id);
             })
             .catch(err => {
                 console.log(err);
@@ -51,7 +51,7 @@ let writeEventData = () => {
         database.ref('events/' + id)
             .set(event)
             .then(() => {
-                console.log("Success!");
+                console.log("Success!", id);
             })
             .catch(err => {
                 console.log(err);
