@@ -128,7 +128,7 @@ export default class AddUsers extends Component {
                                 </Col>
                             </FormGroup>
                         </Col>
-                        <Col xs={2} className="text-right">
+                        <Col xs={12} md={2} className="text-right">
                             <Button type="submit" onClick={this.addGuest} >Add</Button>
                         </Col>
                     </Row>

@@ -1,0 +1,21 @@
+.profilePanel{
+    min-height: 300px;
+    background-size:cover;
+}
+.profilePanel > .panel-body{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+}
+
+.profilePanel .profileName{
+    float: left;
+    margin: 10px !important;
+}
+
+.profilePanel .profileImage{
+    float: left;
+    min-height: 50px;
+    background: white;
+}
