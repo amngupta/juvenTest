@@ -4,31 +4,31 @@
             "name": "Aman Gupta",
             "email": "aman96@gmail.com",
             "image_url": "",
-            "organizations": [
+            "organizations":
                 {
                     "juven": true
                 }
-            ]
+        
         },
         "testbot": {
             "name": "Test Bot",
             "email": "t@bot.com",
             "image_url": "",
-            "organizations": [
+            "organizations":
                 {
                     "juven": true
                 }
-            ]
+        
         },
         "nbhat": {
             "name": "Nayantara Bhat",
             "email": "nayantara@bhat.com",
             "image_url": "",
-            "organizations": [
+            "organizations":
                 {
                     "juven": true
                 }
-            ]
+        
         }
     },
     "organizations": {

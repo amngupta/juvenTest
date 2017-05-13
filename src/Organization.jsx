@@ -44,7 +44,7 @@ export default class OrganizationInfo extends Component {
                 <Row>
                     <ProfileCover organization={this.state.organization} />
                     <EventsCover orgId={this.props.id} />
-                    <AddUsers ordId={this.props.id} />
+                    <AddUsers orgId={this.props.id} />
                 </Row>
             );
         }
