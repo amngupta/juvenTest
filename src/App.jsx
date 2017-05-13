@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './styles/App.css';
 import { Col, Grid, Row } from 'react-bootstrap';
 import Header from "./components/Navbar";
 import OrganizationInfo from "./Organization";

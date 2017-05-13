@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProfileCover from './components/profileCover';
 import EventsCover from './components/eventsCover';
+import AddUsers from './components/addUsers';
 import * as firebase from 'firebase';
 import config from '../config';
 import PropTypes from 'prop-types';
@@ -43,6 +44,7 @@ export default class OrganizationInfo extends Component {
                 <Row>
                     <ProfileCover organization={this.state.organization} />
                     <EventsCover orgId={this.props.id} />
+                    <AddUsers ordId={this.props.id} />
                 </Row>
             );
         }

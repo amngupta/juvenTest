@@ -8,7 +8,6 @@ import Switch from 'react-bootstrap-switch';
 import '../styles/react-bootstrap-switch.css'
 import _ from 'lodash'
 
-
 export default class EventsCover extends Component {
 
     componentWillMount() {
@@ -58,10 +57,12 @@ export default class EventsCover extends Component {
                     <Row>
                         <Col xs={12}>
                             <PageHeader>
-                                <div className="pull-left">Events</div>
-                                <div className="pull-right">
-                                    <Switch onChange={(el, state) => this.handleSwitch(el, state)} name='test' onText="Name" offText="Date" />
-                                </div>
+                                <Row>
+                                    <Col xs={8}>Events</Col>
+                                    <Col xs={4} className="text-right">
+                                        <Switch onChange={(el, state) => this.handleSwitch(el, state)} name='test' onText="Name" offText="Date" />
+                                    </Col>
+                                </Row>
                             </PageHeader>
                         </Col>
                         <Col xs={12}>
