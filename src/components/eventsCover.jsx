@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Col, Row, Image, Table, Panel, PageHeader } from 'react-bootstrap';
+import { Col, Row, PageHeader } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Moment from 'react-moment';
 import * as firebase from 'firebase';
 import EventMedia from './eventMedia';
 import Switch from 'react-bootstrap-switch';
@@ -31,8 +30,6 @@ export default class EventsCover extends Component {
     }
 
     handleSwitch(elem, state) {
-        let database = firebase.database();
-        let orgId = this.props.orgId;
         let {events} = this.state;
         if (state) {
             events = _.sortBy(events, ['name']);

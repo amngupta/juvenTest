@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row, Button, Panel, Media, PageHeader, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
+import { Col, Row, Button, PageHeader, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import * as firebase from 'firebase';
 import _ from 'lodash';
@@ -57,13 +57,15 @@ export default class AddUsers extends Component {
 
     removeGuests() {
         let eventId = this.eventSelect.value;
-        let eventData = this.state.events[eventId];
-        let existingGuests = Object.keys(eventData.users);
-        let companyUsers = this.state.orgUsers;
-        let notInvited = _.omit(companyUsers, existingGuests)
-        this.setState({
-            usersNotInvited: notInvited
-        })
+        if (eventId) {
+            let eventData = this.state.events[eventId];
+            let existingGuests = Object.keys(eventData.users);
+            let companyUsers = this.state.orgUsers;
+            let notInvited = _.omit(companyUsers, existingGuests)
+            this.setState({
+                usersNotInvited: notInvited
+            })
+        }
     }
 
     addGuest() {
@@ -74,9 +76,6 @@ export default class AddUsers extends Component {
             let event = this.state.events[eventId];
             event.users[guestId] = true;
             let database = firebase.database();
-            let orgId = this.props.orgId;
-            let self = this;
-            // console.log(event);
             database.ref('events/' + eventId)
                 .update(event)
         }

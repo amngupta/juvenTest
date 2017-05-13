@@ -11,11 +11,19 @@
 
 .profilePanel .profileName{
     float: left;
+    font-weight: bold;
     margin: 10px !important;
 }
 
 .profilePanel .profileImage{
     float: left;
-    min-height: 50px;
+    height: 50px;
+    width: 50px;
     background: white;
+    border-radius: 5px;
+}
+.profilePanel .profileImage img{
+   width:100%;
+   height: 40px;
+   margin-top: 5px;
 }

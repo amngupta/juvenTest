@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row, Image, Table, Panel, Media, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { ListGroupItem } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import * as firebase from 'firebase';
 
@@ -33,5 +33,5 @@ export default class EventMedia extends Component {
 
 
 EventMedia.propTypes = {
-    userId: PropTypes.object.isRequired,
+    userId: PropTypes.string.isRequired,
 }

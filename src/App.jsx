@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { Col, Grid, Row } from 'react-bootstrap';
 import Header from "./components/Navbar";
 import OrganizationInfo from "./Organization";
 
 class App extends Component {
   render() {
-    const {children} = this.props;
     return (
       <div>
         <Header />
-        <Grid fluid={true}>
-          {children}
-          <OrganizationInfo id="juven" />
-        </Grid>
+        <OrganizationInfo id="juven" />
       </div>
     );
 

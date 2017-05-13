@@ -1,68 +1,79 @@
 {
-    "users": {
-        "aman": {
-            "name": "Aman Gupta",
-            "email": "aman96@gmail.com",
-            "image_url": "",
-            "organizations":
-                {
-                    "juven": true
-                }
-        
+    "events": {
+        "date": "01/06/2017",
+        "debate": {
+            "date": "1500051747",
+            "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Debate_Logo.svg/800px-Debate_Logo.svg.png",
+            "location": "University of Hong Kong",
+            "name": "Debate Tournament",
+            "organization": "harvard",
+            "users": {
+                "aman": true
+            }
         },
-        "testbot": {
-            "name": "Test Bot",
-            "email": "t@bot.com",
+        "image_url": "",
+        "location": "University of Hong Kong",
+        "name": "Debate Tournament",
+        "organization": "juven",
+        "summerParty": {
+            "date": "1487005347",
             "image_url": "",
-            "organizations":
-                {
-                    "juven": true
-                }
-        
+            "location": "Stanley Ho Beach",
+            "name": "Summer Party for Employees",
+            "organization": "juven",
+            "users": {
+                "testbot": true
+            }
         },
-        "nbhat": {
-            "name": "Nayantara Bhat",
-            "email": "nayantara@bhat.com",
-            "image_url": "",
-            "organizations":
-                {
-                    "juven": true
-                }
-        
+        "users": {
+            "aman": true,
+            "testbot": true
         }
     },
     "organizations": {
-        "juven": {
-            "name": "Juven Co.",
-            "description": "Event Management Company",
-            "created_at": "11/05/2017",
+        "harvard": {
+            "cover_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Harvard_square_harvard_yard.JPG/1280px-Harvard_square_harvard_yard.JPG",
+            "created_at": "1487091747",
+            "description": "University Debating Club",
             "location": "Hong Kong",
-            "profile_image_url": "",
-            "cover_image_url": ""
+            "name": "Harvard Debate Club",
+            "profile_image_url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Harvard_shield-University.png"
+        },
+        "juven": {
+            "cover_image_url": "",
+            "created_at": "1494694947",
+            "description": "Event Management Company",
+            "location": "Hong Kong",
+            "name": "Juven Co.",
+            "profile_image_url": ""
         }
     },
-    "events": {
-        "summerParty": {
-            "name": "Summer Party for Employees",
-            "date": "01/06/2017",
-            "location": "Stanley Ho Beach",
+    "users": {
+        "aman": {
+            "email": "aman96@gmail.com",
             "image_url": "",
-            "organization": "juven",
-            "users":
-                {
-                    "testbot": true
-                }
+            "name": "Aman Gupta",
+            "organizations": {
+                "harvard": true,
+                "juven": true
+            }
         },
-        "debate": {
-            "name": "Debate Tournament",
-            "date": "01/06/2017",
-            "location": "University of Hong Kong",
+        "nbhat": {
+            "email": "nayantara@bhat.com",
             "image_url": "",
-            "organization": "juven",
-            "users":
-                {
-                    "aman": true
-                }
+            "name": "Nayantara Bhat",
+            "organizations": {
+                "juven": true
+            }
+        },
+        "testbot": {
+            "email": "t@bot.com",
+            "image_url": "",
+            "name": "Test Bot",
+            "organizations": {
+                "harvard": true,
+                "juven": true
+            }
         }
     }
 }
