@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ProfileCover from './components/profileCover';
+import EventsCover from './components/eventsCover';
 import * as firebase from 'firebase';
 import config from '../config';
 import PropTypes from 'prop-types';
+import { Row } from 'react-bootstrap';
 
 var fconfig = {
     apiKey: config.apiKey,
@@ -27,34 +29,24 @@ export default class OrganizationInfo extends Component {
             .then((snapshot) => {
                 // this.setState(snapshot);
                 let orgVals = snapshot.val();
-                console.log(orgVals);
                 if (orgVals) {
                     self.setState({
                         organization: orgVals
                     });
                 }
             });
-
-        database.ref('events').orderByChild("organization").equalTo(orgId)
-            .on("child_added", function (snapshot) {
-                console.log(snapshot.val());
-                let eventObjs = snapshot.val();
-                if (eventObjs) {
-                    self.setState({
-                        events: eventObjs
-                    });
-                }
-            });
     }
 
     render() {
-        return (
-            <div>
-                {this.state &&
+        if (this.state) {
+            return (
+                <Row>
                     <ProfileCover organization={this.state.organization} />
-                }
-            </div>
-        );
+                    <EventsCover orgId={this.props.id} />
+                </Row>
+            );
+        }
+        return null;
     }
 }
 

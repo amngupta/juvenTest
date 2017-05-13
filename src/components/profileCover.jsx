@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
-import { Col, Row, Image, Table, Panel, PageHeader } from 'react-bootstrap';
+import { Col, Image, Panel, PageHeader } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 

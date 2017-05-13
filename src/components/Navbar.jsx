@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import {Nav, Navbar, NavItem } from 'react-bootstrap';
 
 export default class Header extends Component {
