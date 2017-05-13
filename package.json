@@ -10,6 +10,7 @@
     "prop-types": "^15.5.9",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
+    "react-bootstrap-switch": "^15.5.0-a",
     "react-dom": "^15.5.4",
     "react-moment": "^0.2.2"
   },
@@ -22,6 +23,7 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
+    "deploy-db": "babel-node init",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

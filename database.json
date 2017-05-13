@@ -3,12 +3,32 @@
         "aman": {
             "name": "Aman Gupta",
             "email": "aman96@gmail.com",
-            "image_url": ""
+            "image_url": "",
+            "organizations": [
+                {
+                    "juven": true
+                }
+            ]
         },
         "testbot": {
             "name": "Test Bot",
             "email": "t@bot.com",
-            "image_url": ""
+            "image_url": "",
+            "organizations": [
+                {
+                    "juven": true
+                }
+            ]
+        },
+        "nbhat": {
+            "name": "Nayantara Bhat",
+            "email": "nayantara@bhat.com",
+            "image_url": "",
+            "organizations": [
+                {
+                    "juven": true
+                }
+            ]
         }
     },
     "organizations": {
@@ -16,9 +36,9 @@
             "name": "Juven Co.",
             "description": "Event Management Company",
             "created_at": "11/05/2017",
-            "location":"Hong Kong",
+            "location": "Hong Kong",
             "profile_image_url": "",
-            "cover_image_url":""
+            "cover_image_url": ""
         }
     },
     "events": {
@@ -28,9 +48,23 @@
             "location": "Stanley Ho Beach",
             "image_url": "",
             "organization": "juven",
-            "users": {
-                "testbot": true
-            }
+            "users": [
+                {
+                    "testbot": true
+                }
+            ]
+        },
+        "debate": {
+            "name": "Debate Tournament",
+            "date": "01/06/2017",
+            "location": "University of Hong Kong",
+            "image_url": "",
+            "organization": "juven",
+            "users": [
+                {
+                    "aman": true
+                }
+            ]
         }
     }
 }
