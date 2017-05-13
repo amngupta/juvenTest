@@ -1,79 +1,70 @@
 {
-    "events": {
-        "date": "01/06/2017",
-        "debate": {
-            "date": "1500051747",
-            "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Debate_Logo.svg/800px-Debate_Logo.svg.png",
-            "location": "University of Hong Kong",
-            "name": "Debate Tournament",
-            "organization": "harvard",
-            "users": {
-                "aman": true
-            }
-        },
-        "image_url": "",
-        "location": "University of Hong Kong",
-        "name": "Debate Tournament",
-        "organization": "juven",
-        "summerParty": {
-            "date": "1487005347",
-            "image_url": "",
-            "location": "Stanley Ho Beach",
-            "name": "Summer Party for Employees",
-            "organization": "juven",
-            "users": {
-                "testbot": true
-            }
-        },
-        "users": {
-            "aman": true,
-            "testbot": true
-        }
+  "events" : {
+    "debate" : {
+      "date" : "1500051747",
+      "image_url" : "https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Debate_Logo.svg/800px-Debate_Logo.svg.png",
+      "location" : "University of Hong Kong",
+      "name" : "Debate Tournament",
+      "organization" : "harvard",
+      "users" : {
+        "aman" : true
+      }
     },
-    "organizations": {
-        "harvard": {
-            "cover_image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Harvard_square_harvard_yard.JPG/1280px-Harvard_square_harvard_yard.JPG",
-            "created_at": "1487091747",
-            "description": "University Debating Club",
-            "location": "Hong Kong",
-            "name": "Harvard Debate Club",
-            "profile_image_url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Harvard_shield-University.png"
-        },
-        "juven": {
-            "cover_image_url": "",
-            "created_at": "1494694947",
-            "description": "Event Management Company",
-            "location": "Hong Kong",
-            "name": "Juven Co.",
-            "profile_image_url": ""
-        }
-    },
-    "users": {
-        "aman": {
-            "email": "aman96@gmail.com",
-            "image_url": "",
-            "name": "Aman Gupta",
-            "organizations": {
-                "harvard": true,
-                "juven": true
-            }
-        },
-        "nbhat": {
-            "email": "nayantara@bhat.com",
-            "image_url": "",
-            "name": "Nayantara Bhat",
-            "organizations": {
-                "juven": true
-            }
-        },
-        "testbot": {
-            "email": "t@bot.com",
-            "image_url": "",
-            "name": "Test Bot",
-            "organizations": {
-                "harvard": true,
-                "juven": true
-            }
-        }
+    "summerParty" : {
+      "date" : "1487005347",
+      "image_url" : "http://www.jesus-is-savior.com/Evils%20in%20America/Rock-n-Roll/party.gif",
+      "location" : "Stanley Beach",
+      "name" : "Summer Party for Employees",
+      "organization" : "juven",
+      "users" : {
+        "testbot" : true
+      }
     }
+  },
+  "organizations" : {
+    "harvard" : {
+      "cover_image_url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Harvard_square_harvard_yard.JPG/1280px-Harvard_square_harvard_yard.JPG",
+      "created_at" : "1487091747",
+      "description" : "University Debating Club",
+      "location" : "Hong Kong",
+      "name" : "Harvard Debate Club",
+      "profile_image_url" : "https://upload.wikimedia.org/wikipedia/en/8/8e/Harvard_shield-University.png"
+    },
+    "juven" : {
+      "cover_image_url" : "http://cover2.funscrape.com/Covers/Random_Covers/404_Cover_Not_Found_Random_14.jpg",
+      "created_at" : "1494694947",
+      "description" : "Event Management Company",
+      "location" : "Hong Kong",
+      "name" : "Juven Co.",
+      "profile_image_url" : "https://juven.co/assets/logo_juven-432c3d19396af8ec4662248738aa5e77.png"
+    }
+  },
+  "users" : {
+    "aman" : {
+      "email" : "aman96@gmail.com",
+      "image_url" : "",
+      "name" : "Aman Gupta",
+      "organizations" : {
+        "harvard" : true,
+        "juven" : true
+      }
+    },
+    "nbhat" : {
+      "email" : "nayantara@bhat.com",
+      "image_url" : "",
+      "name" : "Nayantara Bhat",
+      "organizations" : {
+        "juven" : true
+      }
+    },
+    "testbot" : {
+      "email" : "t@bot.com",
+      "image_url" : "",
+      "name" : "Test Bot",
+      "organizations" : {
+        "harvard" : true,
+        "juven" : true
+      }
+    }
+  }
 }
