@@ -48,11 +48,10 @@
             "location": "Stanley Ho Beach",
             "image_url": "",
             "organization": "juven",
-            "users": [
+            "users":
                 {
                     "testbot": true
                 }
-            ]
         },
         "debate": {
             "name": "Debate Tournament",
@@ -60,11 +59,10 @@
             "location": "University of Hong Kong",
             "image_url": "",
             "organization": "juven",
-            "users": [
+            "users":
                 {
                     "aman": true
                 }
-            ]
         }
     }
 }

@@ -24,7 +24,7 @@ export default class EventMedia extends Component {
 
         const modalBody = (
             <ListGroup>
-                {this.props.info.users.map((object, i) => {
+                {Object.keys(this.props.info.users).map((object, i) => {
                     return <EventUser userId={object} key={i} />
                 })}
             </ListGroup>

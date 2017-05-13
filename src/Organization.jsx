@@ -5,7 +5,7 @@ import AddUsers from './components/addUsers';
 import * as firebase from 'firebase';
 import config from '../config';
 import PropTypes from 'prop-types';
-import { Row } from 'react-bootstrap';
+import { Row, Grid } from 'react-bootstrap';
 
 var fconfig = {
     apiKey: config.apiKey,
@@ -22,6 +22,10 @@ export default class OrganizationInfo extends Component {
 
     componentWillMount() {
         firebase.initializeApp(fconfig);
+        firebase.auth().signInAnonymously()
+            .catch(function (error) {
+                console.log(error)
+            });
         let database = firebase.database();
         let orgId = this.props.id;
         let self = this;
@@ -41,11 +45,14 @@ export default class OrganizationInfo extends Component {
     render() {
         if (this.state) {
             return (
-                <Row>
-                    <ProfileCover organization={this.state.organization} />
-                    <EventsCover orgId={this.props.id} />
-                    <AddUsers orgId={this.props.id} />
-                </Row>
+                <Grid>
+                    <Row>
+                        <ProfileCover organization={this.state.organization} />
+                        <EventsCover orgId={this.props.id} />
+                        <AddUsers orgId={this.props.id} />
+                    </Row>
+                    <br />
+                </Grid>
             );
         }
         return null;

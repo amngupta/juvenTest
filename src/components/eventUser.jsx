@@ -6,10 +6,10 @@ import * as firebase from 'firebase';
 export default class EventMedia extends Component {
     componentWillMount() {
         let database = firebase.database();
-        let userId = Object.keys(this.props.userId)[0];
+        let userId = this.props.userId;
         let self = this;
         if (this.props.userId) {
-            database.ref('users/' + userId)
+            database.ref("users/" + userId)
                 .on("value", function (snapshot) {
                     let userInfo = snapshot.val();
                     if (userInfo) {
