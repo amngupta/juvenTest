@@ -9,9 +9,16 @@ import _ from 'lodash'
 
 export default class EventsCover extends Component {
 
-    componentWillMount() {
+    shouldComponentUpdate(nextProps, nextState) {
+        return (this.props.orgId !== nextProps.orgId);
+    }
+
+    componentWillUpdate() {
+        this.getData(this.props.orgId)
+    }
+
+    getData(orgId) {
         let database = firebase.database();
-        let orgId = this.props.orgId;
         let self = this;
         database.ref('events')
             .orderByChild("organization")
@@ -26,7 +33,6 @@ export default class EventsCover extends Component {
                     });
                 }
             });
-
     }
 
     handleSwitch(elem, state) {
