@@ -1,0 +1,8 @@
+{
+    "apiKey": "AIzaSyBmIWoOElN3nIJMyUGf5lQ890h3vllS-4M",
+    "authDomain": "juven-frontend.firebaseapp.com",
+    "databaseURL": "https://juven-frontend.firebaseio.com",
+    "projectId": "juven-frontend",
+    "storageBucket": "juven-frontend.appspot.com",
+    "messagingSenderId": "297658297174"
+}
