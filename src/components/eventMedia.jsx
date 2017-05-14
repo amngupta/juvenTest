@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Media, Table } from 'react-bootstrap';
+import { Col,  Media, ListGroup } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import ModalOpen from './Modal';
@@ -23,23 +23,14 @@ export default class EventMedia extends Component {
         )
 
         const modalBody = (
-            <Table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {Object.keys(this.props.info.users).map((object, i) => {
-                        return <EventUser userId={object} key={i} />
-                    })}
-                </tbody>
-            </Table>
+            <ListGroup>
+                {Object.keys(this.props.info.users).map((object, i) => {
+                    return <EventUser userId={object} key={i} />
+                })}
+            </ListGroup>
         )
 
-        const modalHeader = "Guests";
+        const modalHeader = "Guests"; 
         return (
             <Col xs={12}>
                 <ModalOpen eventListener={mediaBody} modalHeader={modalHeader} modalBody={modalBody} />

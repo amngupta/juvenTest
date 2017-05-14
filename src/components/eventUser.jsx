@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Image } from 'react-bootstrap';
+import { ListGroupItem } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import * as firebase from 'firebase';
 
 export default class EventMedia extends Component {
-    
-    
     componentWillMount() {
         let database = firebase.database();
         let userId = this.props.userId;
@@ -26,11 +24,7 @@ export default class EventMedia extends Component {
 
     render() {
         if (this.state && this.state.userInfo) {
-            return (<tr>
-                <td><Image src={this.state.userInfo.image_url} responsive /></td>
-                <td>{this.state.userInfo.name}</td>
-                <td>{this.state.userInfo.email}</td>
-            </tr>);
+            return <ListGroupItem>{this.state.userInfo.name}</ListGroupItem>;
         }
         return null;
     }
